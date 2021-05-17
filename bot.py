@@ -2,10 +2,10 @@ import discord
 from discord.ext import commands
 from discord.flags import Intents
 
-bottk="ODQzODU2NjI1MTAyMjI1NDA4.YKJ8uQ.9DweZMuEuQKQvk2CHE8TGLu6H7E"
+bottk=""
 
 intents=discord.Intents(messages = True, guilds = True, reactions = True, members = True, presences = True)
-client=commands.Bot(server_prefix='!', intents=intents)
+client=commands.Bot(command_prefix='!', intents=intents)
 
 @client.event
 async def on_ready():
