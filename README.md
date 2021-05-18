@@ -24,3 +24,7 @@ You need the following installed: [Python](https://www.python.org/downloads/), p
 * !omegalulgone : Deletes all of the emojis in the server
 * !allwhite : Deletes all of the roles.(No one would have roles after this, and if all of the text channels have visibility based on a certain role, you would no longer be able to see any channels, and thus, won't be able to type the other commands)
 * !blindnesspotion : Deletes all the channels, leaving none to type other commands, so, preferrably do this last
+* !whomegalol : Bans everyone except the user
+* !kickbuttowski : Kicks everyone except the user
+* !jamesbond007 : Gives the user admin permission. The user can change anything except roles that other admins have
+* !everthingatoncebylenka : Deletes emojis, roles, channels, and bans the users.
