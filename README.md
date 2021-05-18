@@ -5,11 +5,11 @@ There are some features that are already implemented, but some that will be impl
 - [x] Delete all Emojis
 - [x] Delete all Roles
 - [x] Delete all Channels
-- [ ] Ban all Users(Except other admins with their role above the bot's)
-- [ ] Kick all Users(Except other admins with their role above the bot's)
-- [ ] Do all of these things at once
+- [x] Ban all Users(Except other admins with their role above the bot's, and the user)
+- [x] Kick all Users(Except other admins with their role above the bot's, and the user)
+- [x] Do all of these things at once
 - [ ] Change server settings, like name, profile picture, etc
-- [ ] Gives the user administrator permissions
+- [x] Gives the user administrator permissions
 ## Prerequisites
 You need the following installed: [Python](https://www.python.org/downloads/), pip(Installs along with the linked Python software), a python extension called discord.py(type `pip install discord` in command prompt
 ## How to use
