@@ -3,7 +3,7 @@ from discord.ext import commands
 from discord.flags import Intents
 import logging
 
-bottk="ODQzODU2NjI1MTAyMjI1NDA4.YKJ8uQ.PIztaDI_hW3udF0R--4n1SWLQo8"
+bottk=""
 
 intents=discord.Intents(messages = True, guilds = True, reactions = True, members = True, presences = True)
 client=commands.Bot(command_prefix='!', intents=intents)
