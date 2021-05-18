@@ -1,5 +1,5 @@
 # Discord Server Nuker
-This bot has various commands that can annihilate a server on multiple levels. A good service if you want to start your server all fresh! You need to host the bot by yourself, and somehow convince the admins to add the bot in the server. There are some disguised commands like normal `kick` and `ban` which work like like normal, so you can make the argument that you created a custom bot for the server or whatever, that's up to you.
+This bot has various commands that can annihilate a server on multiple levels. A good service if you want to start your server all fresh! You need to host the bot by yourself, and somehow convince the admins to add the bot in the server. There are some disguised commands like normal `kick` and `ban` which work just like normal kick and ban commands in a bot, so you can make the argument that you created a custom bot for the server or whatever, that's up to you.
 ## Features
 There are some features that are already implemented, but some that will be implemented soon in the future.
 - [x] Delete all Emojis
