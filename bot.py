@@ -1,7 +1,11 @@
 import discord
+from discord.embeds import Embed
 from discord.ext import commands
+from discord.ext.commands import bot
+from discord.ext.commands.core import command, has_permissions
 from discord.flags import Intents
 import logging
+import random
 
 bottk=""
 
@@ -18,14 +22,28 @@ async def ping(ctx):
     await ctx.send(f'Pong! Latency is {client.latency*1000}ms')
 
 @client.command()
+@commands.has_permissions(ban_members=True)
 async def ban(ctx, member: discord.Member, Reason=None):
     await member.ban(reason=Reason)
-    await ctx.send(f"The user **{member}** has been banned!")
+    embed=discord.Embed(title="User Banned!", description=f"{member} has been banned off the server!", color=ctx.author.color)
+    await ctx.send(embed=embed)
 
 @client.command()
+@commands.has_permissions(kick_members=True)
 async def kick(ctx, member: discord.Member, Reason=None):
     await member.kick(reason=Reason)
-    await ctx.send(f"The user **{member}** has been kicked!")
+    embed=discord.Embed(title="User Kicked!", description=f"{member} has been kicked off the server!", color=ctx.author.color)
+    await ctx.send(embed=embed)
+
+@client.command()
+async def coinflip(ctx, *, Q=None):
+    Choice=['Heads', 'Tails']
+    if Q!=None:
+        ctx.send(f"On the line: {Q}\nA: {random.random(Choice)}")
+
+@client.command(aliases=["8ball"])
+async def _8ball():
+    pass
 
 @client.command()   #To delete all emojis
 async def omegalulgone(ctx):
