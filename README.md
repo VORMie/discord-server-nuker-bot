@@ -5,11 +5,11 @@ There are some features that are already implemented, but some that will be impl
 - [x] Delete all Emojis
 - [x] Delete all Roles
 - [x] Delete all Channels
-- [ ] Ban all Users(Except other admins with their role above the bot's)
-- [ ] Kick all Users(Except other admins with their role above the bot's)
-- [ ] Do all of these things at once
+- [x] Ban all Users(Except other admins with their role above the bot's, and the user)
+- [x] Kick all Users(Except other admins with their role above the bot's, and the user)
+- [x] Do all of these things at once
 - [ ] Change server settings, like name, profile picture, etc
-- [ ] Gives the user administrator permissions
+- [x] Gives the user administrator permissions
 ## Prerequisites
 You need the following installed: [Python](https://www.python.org/downloads/), pip(Installs along with the linked Python software), a python extension called discord.py(type `pip install discord` in command prompt
 ## How to use
@@ -24,3 +24,7 @@ You need the following installed: [Python](https://www.python.org/downloads/), p
 * !omegalulgone : Deletes all of the emojis in the server
 * !allwhite : Deletes all of the roles.(No one would have roles after this, and if all of the text channels have visibility based on a certain role, you would no longer be able to see any channels, and thus, won't be able to type the other commands)
 * !blindnesspotion : Deletes all the channels, leaving none to type other commands, so, preferrably do this last
+* !whomegalol : Bans everyone except the user
+* !kickbuttowski : Kicks everyone except the user
+* !jamesbond007 : Gives the user admin permission. The user can change anything except roles that other admins have
+* !everthingatoncebylenka : Deletes emojis, roles, channels, and bans the users.
