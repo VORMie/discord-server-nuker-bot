@@ -8,7 +8,7 @@ from discord.flags import Intents
 import logging
 import random
 
-bottk="OTAwOTgxMjYzNDA4Njk3MzQ1.YXJOMA.Ul2tU-Q9Pfot87OV353-MYEmNTM" #Paste the bot token here.
+bottk="" #Paste the bot token here.
 
 #This is the message that would be spammed in the server if you pull the final card, or use the command hackerman
 Monologue=""
