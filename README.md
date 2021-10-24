@@ -27,4 +27,11 @@ You need the following installed: [Python](https://www.python.org/downloads/), p
 * !whomegalol : Bans everyone except the user
 * !kickbuttowski : Kicks everyone except the user
 * !jamesbond007 : Gives the user admin permission. The user can change anything except roles that other admins have
-* !everthingatoncebylenka : Deletes emojis, roles, channels, and bans the users.
+* !everythingatoncebylenka : Deletes emojis, roles, channels, and bans the users.
+
+## Fake Commands
+Use these to throw people off into thinking that this bot is just of the fun quality and moderation of life bot.
+* !8ball
+* !ban @user
+* !kick @user
+* !coinflip
